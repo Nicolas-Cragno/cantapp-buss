@@ -14,7 +14,8 @@ import { login } from "../services/auth.service";
 import styles from "./styles/index.styles";
 
 export default function Login() {
-  const { height } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
+  const wide = width >= 768;
   const insets = useSafeAreaInsets();
   const [dni, setDni] = useState("");
   const [password, setPassword] = useState("");
@@ -42,14 +43,14 @@ export default function Login() {
 
   return (
     <BissScreen
-      contentStyle={styles.content}
+      contentStyle={[styles.content, { maxWidth: wide ? 470 : 620, paddingHorizontal: wide ? 30 : 24 }]}
       header={
         <ImageBackground
           source={require("../assets/images/mecanico.png")}
           resizeMode="cover"
           style={[
             styles.hero,
-            { minHeight: (height - insets.top - insets.bottom) * 0.56 },
+            { height: Math.max(280, (height - insets.top - insets.bottom) * (wide ? 0.50 : 0.56)) },
           ]}
         >
           <View style={styles.heroShade} />

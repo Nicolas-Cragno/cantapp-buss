@@ -23,7 +23,7 @@ export default function Home() {
     <BissScreen
       header={
         <ImageBackground
-          source={require("../assets/images/tools.png")}
+          source={require("../assets/images/caucho.png")}
           style={[styles.hero, { minHeight: 240 }]}
           resizeMode="cover"
         >

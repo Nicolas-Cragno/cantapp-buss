@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: "100%",
-    maxWidth: 620,
+    maxWidth: 1200,
     alignSelf: "center",
     paddingTop: 12,
     paddingBottom: 24,
