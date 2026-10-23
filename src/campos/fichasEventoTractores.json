@@ -1,0 +1,148 @@
+{
+  "id": "fichasEventoTractores",
+  "coleccion": "eventos",
+  "titulo": "EVENTO TRACTORES",
+  "tituloCampo": "tipo",
+  "subtituloCampo": "id",
+  "campos": [
+    {
+      "key": "sucursal",
+      "label": "Sucursal",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "mecanico",
+      "label": "Mecanico",
+      "visible": true,
+      "format": "list"
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "tractor",
+      "label": "Tractor",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "kilometraje",
+      "label": "Kilometraje",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "chofer",
+      "label": "Chofer",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "repuestos",
+      "label": "Repuestos",
+      "visible": true,
+      "format": "list",
+      "items": [
+        {
+          "key": "repuesto",
+          "label": "Repuesto"
+        },
+        {
+          "key": "cantidad",
+          "label": "Cantidad"
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad"
+        }
+      ]
+    },
+    {
+      "key": "chequeos",
+      "label": "Chequeos",
+      "visible": true,
+      "format": "list",
+      "items": [
+        {
+          "key": "aceiteMotor",
+          "label": "Aceite de Motor"
+        },
+        {
+          "key": "filtroGasoil",
+          "label": "Filtro de Gasoil"
+        },
+        {
+          "key": "trampaAgua",
+          "label": "Trampa de Agua"
+        },
+        {
+          "key": "filtroAceite",
+          "label": "Filtro de Aceite"
+        },
+        {
+          "key": "filtroAire",
+          "label": "Filtro de Aire"
+        },
+        {
+          "key": "filtroHidraulico",
+          "label": "Filtro Hidráulico"
+        },
+        {
+          "key": "engrase",
+          "label": "Engrase"
+        },
+        {
+          "key": "filtroSecador",
+          "label": "Filtro Secador"
+        },
+        {
+          "key": "aceiteCaja",
+          "label": "Aceite de Caja"
+        },
+        {
+          "key": "filtroCaja",
+          "label": "Filtro de Caja"
+        },
+        {
+          "key": "aceiteDiferencial",
+          "label": "Acite Diferencial"
+        },
+        {
+          "key": "filtroDiferencial",
+          "label": "Filtro Diferencial"
+        },
+        {
+          "key": "filtroAgua",
+          "label": "Filtro de Agua"
+        },
+        {
+          "key": "anticongelante",
+          "label": "Anticongelante"
+        }
+      ]
+    }
+  ],
+  "relaciones": [
+    {
+      "id": "repuestos",
+      "titulo": "Repuestos utilizados",
+      "source": "self.repuestos"
+    },
+    {
+      "id": "unidad",
+      "titulo": "Unidad relacionada",
+      "source": "tractores",
+      "joinKey": "tractor"
+    }
+  ]
+}

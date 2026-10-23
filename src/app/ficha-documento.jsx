@@ -1,0 +1,1 @@
+import {useLocalSearchParams} from "expo-router";import ConfiguredFicha from "../components/ConfiguredFicha";import factura from "../campos/fichaFactura.json";import remito from "../campos/fichaRemito.json";export default function Screen(){const {tipo}=useLocalSearchParams();return <ConfiguredFicha config={String(tipo||"").toUpperCase()==="REMITO"?remito:factura}/>;}

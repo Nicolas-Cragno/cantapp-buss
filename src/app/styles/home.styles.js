@@ -1,0 +1,25 @@
+import { StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+  hero: { width: "100%", backgroundColor: "#333333", justifyContent: "center", paddingTop: 56, paddingBottom: 24 },
+  heroShade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.15)" },
+  logout: { position: "absolute", top: 16, right: 30, minWidth: 48, minHeight: 48, alignItems: "center", justifyContent: "center" },
+  logoutText: { color: "#ffffff", fontSize: 42, fontWeight: "300" },
+  welcome: { fontSize: 34, color: "#ffffff", fontWeight: "800", textAlign: "center", paddingHorizontal: 24, paddingVertical: 16, textShadowColor: "#000000", textShadowOffset: { width: 0, height: 2 }, textShadowRadius: 8 },
+  content: { paddingHorizontal: "10%", paddingTop: 22, paddingBottom: 24 },
+  actions: { gap: 24 },
+  card: { width: "100%", minHeight: 180, aspectRatio: 1.55, borderRadius: 12, overflow: "hidden", backgroundColor: "#333333" },
+  cardImage: { flex: 1, justifyContent: "flex-end", alignItems: "center", paddingHorizontal: "10%", paddingBottom: 10, paddingTop: 20 },
+  cardShade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.1)" },
+  button: { minHeight: 52, paddingHorizontal: 10, paddingVertical: 12, borderRadius: 10, borderWidth: 2, borderColor: "#cccccc", backgroundColor: "rgba(0,0,0,0.55)", justifyContent: "center", alignItems: "center", width: "100%" },
+  buttonText: { fontSize: 18, fontWeight: "800", color: "#ffffff", textAlign: "center" },
+  modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.75)", justifyContent: "center", alignItems: "center", padding: 24 },
+  modal: { width: "100%", maxWidth: 360, backgroundColor: "#222222", borderRadius: 24, padding: 24 },
+  modalTitle: { fontSize: 22, color: "#ffffff", fontWeight: "600", marginBottom: 12 },
+  modalText: { fontSize: 16, color: "#dddddd", lineHeight: 24, marginBottom: 24 },
+  modalActions: { flexDirection: "row", flexWrap: "wrap", justifyContent: "flex-end", gap: 12 },
+  modalCancelButton: { minHeight: 48, paddingVertical: 12, paddingHorizontal: 16, justifyContent: "center" },
+  modalConfirmButton: { minHeight: 48, paddingVertical: 12, paddingHorizontal: 16, backgroundColor: "#000000", borderWidth: 1, borderColor: "#FFBD59", borderRadius: 14, justifyContent: "center" },
+  modalCancelText: { color: "#ffffff", fontWeight: "600" },
+  modalConfirmText: { color: "#FFBD59", fontWeight: "600" },
+});

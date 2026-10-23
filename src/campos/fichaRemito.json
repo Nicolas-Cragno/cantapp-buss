@@ -1,0 +1,33 @@
+{
+  "id": "fichaRemito",
+  "coleccion": "documentos",
+  "titulo": "REMITO",
+  "tituloCampo": "numero",
+  "campos": [
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "visible": true
+    },
+    {
+      "key": "numero",
+      "label": "Número",
+      "visible": true
+    },
+    {
+      "key": "fecha",
+      "label": "Fecha de emisión",
+      "visible": true
+    },
+    {
+      "key": "proveedor",
+      "label": "Proveedor",
+      "visible": true
+    },
+    {
+      "key": "elementos",
+      "label": "Elementos",
+      "visible": true
+    }
+  ]
+}
