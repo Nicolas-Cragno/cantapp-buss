@@ -1,0 +1,131 @@
+{
+  "id": "formEventoFurgones",
+  "coleccion": "eventos",
+  "titulo": "EVENTO FURGONES",
+  "area": "furgones",
+  "campos": [
+    {
+      "key": "usuarioRegistro",
+      "label": "Usuario que registra",
+      "inputType": "readonly",
+      "dato": "number",
+      "use": "calculate",
+      "source": "session.persona.id",
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "sucursal",
+      "label": "Sucursal",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "ubicaciones",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "mecanico",
+      "label": "Mecanico",
+      "type": "principal",
+      "use": "database",
+      "dato": "array",
+      "inputType": "multiOptions",
+      "optionsList": "mecanicos",
+      "importante": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "use": "database",
+      "type": "principal",
+      "dato": "text",
+      "inputType": "textarea",
+      "important": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "type": "secondary",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "tiposTractores",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "furgon",
+      "label": "Furgon",
+      "type": "secondary",
+      "use": "database",
+      "dato": "number",
+      "inputType": "inputOptions",
+      "optionsList": "furgones",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "repuestos",
+      "label": "Repuestos",
+      "type": "group",
+      "optionsList": "stock",
+      "use": "database",
+      "dato": "array",
+      "important": false,
+      "addButton": true,
+      "mostrarTipoMovimiento": false,
+      "items": [
+        {
+          "key": "repuesto",
+          "label": "Repuesto",
+          "inputType": "inputOptions",
+          "optionsList": "stock",
+          "dato": "number",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        },
+        {
+          "key": "cantidad",
+          "label": "Cantidad",
+          "inputType": "input",
+          "dato": "number",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad",
+          "inputType": "inputOptions",
+          "optionsList": "unidades",
+          "dato": "text",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        }
+      ],
+      "required": false,
+      "visible": true
+    },
+    {
+      "key": "depositoSeleccionado",
+      "label": "Depósito de repuestos",
+      "inputType": "inputOptions",
+      "optionsList": "depositos",
+      "dato": "text",
+      "use": "calculate",
+      "required": false,
+      "visible": true
+    }
+  ]
+}

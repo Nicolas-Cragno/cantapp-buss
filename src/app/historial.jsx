@@ -1,36 +1,26 @@
 import { useContext, useState } from "react";
 import { Pressable, Text, View } from "react-native";
-import BissScreen from "../components/BissScreen";
 import BussList from "../components/BussList";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function Screen() {
   const { user } = useContext(AuthContext);
   const [onlyMine, setOnlyMine] = useState(false);
-
   const area = String(user?.area || "").toLowerCase();
-
-  const mine = (evento) => {
-    const identificadores = [user?.nombre, user?.id, user?.dni].filter(Boolean);
-
-    return identificadores.some(
-      (valor) =>
-        String(valor).toLowerCase() ===
-        String(evento.usuario || "").toLowerCase(),
+  const identifiers = [user?.nombre, user?.id, user?.dni, user?.email]
+    .filter(Boolean)
+    .map((value) => String(value).trim().toLowerCase());
+  const mine = (event) =>
+    identifiers.includes(
+      String(event.usuario || "")
+        .trim()
+        .toLowerCase(),
     );
-  };
-
-  const filtrarEventos = (evento) => {
-    const mismaArea = String(evento.area || "").toLowerCase() === area;
-
-    return mismaArea && (!onlyMine || mine(evento));
-  };
-
   return (
-    <BissScreen>
-      <View style={{ padding: 12, gap: 8 }}>
+    <View style={{ flex: 1, backgroundColor: "#000" }}>
+      <View style={{ paddingHorizontal: 20, paddingTop: 15 }}>
         <Pressable
-          onPress={() => setOnlyMine((actual) => !actual)}
+          onPress={() => setOnlyMine((value) => !value)}
           style={{
             padding: 12,
             borderWidth: 1,
@@ -43,13 +33,21 @@ export default function Screen() {
           </Text>
         </Pressable>
       </View>
-
-      <BussList
-        title="HISTORIAL"
-        path="/eventos"
-        filter={filtrarEventos}
-        detail="/ficha-trabajo"
-      />
-    </BissScreen>
+      {area ? (
+        <BussList
+          title=""
+          path={`/eventos/${encodeURIComponent(area)}`}
+          filter={(event) =>
+            String(event.area || "").toLowerCase() === area &&
+            (!onlyMine || mine(event))
+          }
+          detail="/ficha-trabajo"
+        />
+      ) : (
+        <Text style={{ color: "#fff", padding: 20 }}>
+          Usuario sin área asignada.
+        </Text>
+      )}
+    </View>
   );
 }

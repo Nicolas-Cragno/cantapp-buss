@@ -1,0 +1,65 @@
+{
+  "id": "fichaStock",
+  "coleccion": "stock",
+  "titulo": "STOCK",
+  "tituloCampo": "descripcion",
+  "subtituloCampo": "id",
+  "campos": [
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "descripcion",
+      "label": "Descripcion",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "unidad",
+      "label": "Unidad de medida",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "marca",
+      "label": "Marca",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "proveedor",
+      "label": "Proveedor",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "codigoProveedor",
+      "label": "Codigo Proveedor",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "visible": true,
+      "format": "text"
+    }
+  ],
+  "relaciones": [
+    {
+      "id": "existencias",
+      "titulo": "Existencias por depósito",
+      "source": "depositos",
+      "joinKey": "id"
+    },
+    {
+      "id": "movimientos",
+      "titulo": "Movimientos de stock",
+      "source": "eventos",
+      "joinKey": "id"
+    }
+  ]
+}

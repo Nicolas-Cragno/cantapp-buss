@@ -45,7 +45,7 @@ export default function Login() {
       contentStyle={styles.content}
       header={
         <ImageBackground
-          source={require("../assets/images/ypf.png")}
+          source={require("../assets/images/mecanico.png")}
           resizeMode="cover"
           style={[
             styles.hero,

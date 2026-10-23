@@ -4,6 +4,16 @@
   "titulo": "STOCK",
   "campos": [
     {
+      "key": "id",
+      "label": "Código del artículo",
+      "inputType": "input",
+      "dato": "text",
+      "required": true,
+      "use": "local",
+      "visible": true,
+      "isId": true
+    },
+    {
       "key": "tipo",
       "label": "Tipo",
       "type": "principal",

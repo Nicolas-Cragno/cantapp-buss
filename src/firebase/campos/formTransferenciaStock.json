@@ -1,0 +1,98 @@
+{
+  "id": "formTransferenciaStock",
+  "coleccion": "eventos",
+  "titulo": "TRANSFERENCIA STOCK",
+  "campos": [
+    {
+      "key": "origen",
+      "label": "Deposito de origen",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "depositos",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "destino",
+      "label": "Deposito de destino",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "depositos",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "use": "database",
+      "type": "principal",
+      "dato": "text",
+      "inputType": "textarea",
+      "important": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "key": "ingresos",
+      "label": "Movimiento a registrar",
+      "type": "group",
+      "use": "database",
+      "dato": "array",
+      "important": false,
+      "mostrarTipoMovimiento": false,
+      "items": [
+        {
+          "key": "id",
+          "label": "Articulo",
+          "type": "group",
+          "dato": "string",
+          "inputType": "inputOptions",
+          "optionsList": "stock",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        },
+        {
+          "key": "cantidad",
+          "label": "Cantidad",
+          "type": "group",
+          "dato": "number",
+          "inputType": "input",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        },
+        {
+          "key": "moneda",
+          "label": "Moneda",
+          "type": "group",
+          "dato": "boolean",
+          "inputType": "booleanDouble",
+          "optionOne": "AR$",
+          "optionTwo": "U$D",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        },
+        {
+          "key": "valor",
+          "label": "Valor",
+          "type": "group",
+          "dato": "number",
+          "inputType": "input",
+          "required": false,
+          "visible": true,
+          "use": "database"
+        }
+      ],
+      "required": false,
+      "visible": true
+    }
+  ]
+}

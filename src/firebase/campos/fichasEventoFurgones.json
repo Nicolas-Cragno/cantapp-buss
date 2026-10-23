@@ -1,0 +1,72 @@
+{
+  "id": "fichasEventoFurgones",
+  "coleccion": "eventos",
+  "titulo": "EVENTO FURGONES",
+  "tituloCampo": "tipo",
+  "subtituloCampo": "id",
+  "campos": [
+    {
+      "key": "sucursal",
+      "label": "Sucursal",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "mecanico",
+      "label": "Mecanico",
+      "visible": true,
+      "format": "list"
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "furgon",
+      "label": "Furgon",
+      "visible": true,
+      "format": "text"
+    },
+    {
+      "key": "repuestos",
+      "label": "Repuestos",
+      "visible": true,
+      "format": "list",
+      "items": [
+        {
+          "key": "repuesto",
+          "label": "Repuesto"
+        },
+        {
+          "key": "cantidad",
+          "label": "Cantidad"
+        },
+        {
+          "key": "unidad",
+          "label": "Unidad"
+        }
+      ]
+    }
+  ],
+  "relaciones": [
+    {
+      "id": "repuestos",
+      "titulo": "Repuestos utilizados",
+      "source": "self.repuestos"
+    },
+    {
+      "id": "unidad",
+      "titulo": "Unidad relacionada",
+      "source": "furgones",
+      "joinKey": "furgon"
+    }
+  ]
+}

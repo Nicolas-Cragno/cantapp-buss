@@ -1,0 +1,51 @@
+{
+  "id": "formDocumento",
+  "coleccion": "documentos",
+  "titulo": "DOCUMENTO",
+  "campos": [
+    {
+      "key": "tipo",
+      "label": "Tipo de documento",
+      "dato": "text",
+      "inputType": "select",
+      "options": [
+        "REMITO",
+        "FACTURA"
+      ],
+      "required": true,
+      "use": "database"
+    },
+    {
+      "key": "numero",
+      "label": "Número de documento",
+      "dato": "text",
+      "inputType": "input",
+      "required": true,
+      "use": "database"
+    },
+    {
+      "key": "fecha",
+      "label": "Fecha de emisión",
+      "dato": "date",
+      "inputType": "date",
+      "required": true,
+      "use": "database"
+    },
+    {
+      "key": "proveedor",
+      "label": "Proveedor",
+      "dato": "string",
+      "inputType": "select",
+      "optionsList": "proveedores",
+      "required": true,
+      "use": "database"
+    },
+    {
+      "key": "elementos",
+      "label": "Elementos",
+      "dato": "array",
+      "inputType": "group",
+      "use": "database"
+    }
+  ]
+}

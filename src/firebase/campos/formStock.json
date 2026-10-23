@@ -1,0 +1,97 @@
+{
+  "id": "formStock",
+  "coleccion": "stock",
+  "titulo": "STOCK",
+  "campos": [
+    {
+      "key": "id",
+      "label": "Código del artículo",
+      "inputType": "input",
+      "dato": "text",
+      "required": true,
+      "use": "local",
+      "visible": true,
+      "isId": true
+    },
+    {
+      "key": "tipo",
+      "label": "Tipo",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "stockType",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "descripcion",
+      "label": "Descripcion",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "input",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "unidad",
+      "label": "Unidad de medida",
+      "type": "principal",
+      "use": "database",
+      "dato": "text",
+      "inputType": "inputOptions",
+      "optionsList": "unidades",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "marca",
+      "label": "Marca",
+      "type": "secondary",
+      "use": "database",
+      "dato": "text",
+      "inputType": "input",
+      "important": true,
+      "required": true,
+      "visible": true
+    },
+    {
+      "key": "proveedor",
+      "label": "Proveedor",
+      "type": "secondary",
+      "use": "database",
+      "dato": "string",
+      "inputType": "inputOptions",
+      "optionsList": "proveedores",
+      "important": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "key": "codigoProveedor",
+      "label": "Codigo Proveedor",
+      "type": "secondary",
+      "use": "database",
+      "dato": "text",
+      "inputType": "input",
+      "important": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "key": "detalle",
+      "label": "Detalle",
+      "type": "secondary",
+      "use": "database",
+      "dato": "text",
+      "inputType": "textarea",
+      "important": false,
+      "required": false,
+      "visible": true
+    }
+  ]
+}
